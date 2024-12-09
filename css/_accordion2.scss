@@ -1,0 +1,187 @@
+
+.about-managers {
+   background: linear-gradient(296.9deg, #6D5BA3 -43.55%, #551D99 2.44%, #802A84 61.24%);
+
+		&_wrapper {
+      padding: 150px 0 50px 0;
+        @media (max-width: 1400px){
+          padding: 100px 0 0px 0;
+        }
+        @media (max-width: 700px){
+          padding: 50px 0 0px 0;
+        }
+        @media (max-width: 450px){
+          padding:  30px 0 0px 0;
+        }
+		}
+
+		&_box {
+		}
+
+		&_title {
+      font-size: 96px;
+      font-weight: 600;
+      line-height: 76px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 0 0 50px 0;
+      border-bottom: 3px solid white;
+      margin: 0 0 21px 0;
+      @media (max-width: 1400px) {
+        font-size: 70px;
+        padding: 0 0 40px 0;
+        line-height: 60px;
+      }
+      @media (max-width: 700px) {
+        font-size: 45px;
+        line-height: 44px;
+        padding: 0 0 20px 0;
+      }
+      @media (max-width: 450px) {
+        font-size: 24px;
+        line-height: 20px;
+        padding: 0 0 15px 0;
+      }
+		}
+
+		&_accordion-block {
+      position: relative;
+      padding: 0 0 100px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 1440px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px;
+      }
+      @media (max-width: 700px) {
+        padding: 0 0 50px 0;
+        gap: 15px;
+      }
+      @media (max-width: 450px) {
+        padding: 0 0 20px 0;
+        gap: 15px;
+      }
+      @media (max-width: 1400px) {
+        &::after{
+          position: absolute;
+          content: '';
+          top: 32px;
+          right: 0px;
+          width: 50px;
+          height: 30px;
+          background: url(../img/accordion\ arrrow.png) no-repeat;
+          background-size: 20px;
+            @media (max-width: 700px) {
+              top: 16px;
+              right: -20px;
+              
+            }
+            @media (max-width: 450px) {
+              top: 8px;
+              right: -10px;
+              background-size: 10px;
+            }
+        }
+      }
+		}
+
+		&_trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      cursor: pointer;
+      @media (max-width: 1400px ) {
+        flex-grow: 1;
+        justify-content: flex-start;
+      }
+		}
+
+		&_accirdion-image {
+      margin:  0  60px 0 0;
+      max-width: 150px;
+        @media(max-width: 1552px){
+          max-width: 100px;
+        }
+        @media(max-width: 700px){
+          max-width: 60px;
+          margin:  0  40px 0 0;
+        }
+        @media(max-width: 450px){
+          max-width: 30px;
+          margin:  0  20px 0 0;
+        }
+		}
+
+		&_accordion-title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 54px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #F9B21E;
+        text-transform: uppercase;
+        @media(max-width: 1552px){
+          font-size: 24px;
+          line-height: 34px;
+          max-width: 450px;
+        }
+        @media(max-width: 700px){
+          font-size: 17px;
+          line-height: 20px;
+          max-width: 300px;
+        }
+        @media(max-width: 450px){
+          font-size: 13px;
+          line-height: 15px;
+          max-width: 200px;
+        }
+		}
+
+		&_accordion-text {
+      max-width: 800px;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 44px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #fff;
+        @media(max-width: 1552px){
+          font-size: 24px;
+          line-height: 34px;
+        }
+        @media(max-width: 1440px){
+          font-size: 24px;
+          max-width: 100%;
+        }
+        @media(max-width: 700px){
+          font-size: 17px;
+          line-height: 20px;
+        }
+        @media(max-width: 450px){
+          font-size: 13px;
+          line-height: 15px;
+        }
+		}
+}
+
+
+  @media (max-width: 1400px){
+    .about-managers_accordion-text {
+      max-height: 0; /* Начальное состояние */
+      opacity: 0; /* Прозрачность в скрытом состоянии */
+      overflow: hidden; /* Скрываем содержимое */
+      transition: max-height 1s ease, opacity 0.3s ease; /* Добавляем анимацию */
+    }
+
+    .about-managers_accordion-block.active .about-managers_accordion-text {
+      max-height: 500px; /* Максимальная высота (выберите значение под контент) */
+      opacity: 1; /* Делаем текст видимым */
+    }
+  }

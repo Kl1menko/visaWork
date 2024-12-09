@@ -1,0 +1,6 @@
+User -agent: *
+Disallow:
+
+Disallow: /private/
+
+Allow: /private/allowed-page.html

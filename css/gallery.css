@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+body {
+  font-family: Montserrat;
+}
+
+.gallery {
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery_title {
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #2f4acd;
+  text-align: center;
+}
+@media (max-width: 650px) {
+  .gallery_title {
+    font-size: 70px;
+  }
+}
+@media (max-width: 450px) {
+  .gallery_title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+.gallery_button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}/*# sourceMappingURL=gallery.css.map */
