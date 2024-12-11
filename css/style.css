@@ -890,6 +890,11 @@ html {
   margin-top: 60px;
   filter: drop-shadow(0 0 25px #bbbac3);
 }
+@media (max-width: 600px) {
+  .company_picture {
+    margin-bottom: 30px;
+  }
+}
 .company_flags {
   max-width: 100%;
   padding: 0 40px;
