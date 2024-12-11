@@ -651,9 +651,12 @@ html {
   top: 0;
   left: 0;
   width: 100%;
+  background: rgb(255, 255, 255); /* Статичний білий фон */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, -webkit-backdrop-filter 0.3s;
+  transition: background 0.3s, backdrop-filter 0.3s;
+  transition: background 0.3s, backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s; /* Плавний перехід */
 }
 .header_wrapper {
   display: flex;
@@ -1546,43 +1549,27 @@ html {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  max-width: 75%;
+  row-gap: 50px;
 }
-.comments_block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 0 1 330px;
-  background-color: rgba(0, 0, 0, 0.0196078431);
-  padding: 20px;
-  border-radius: 10%;
-  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.363);
+.comments_hero img {
+  max-width: 400px;
+  height: 400px;
+  box-shadow: 0px 9px 36px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
 }
-.comments_rating {
-  margin: 0 0 50px 0;
+.comments_hero img:hover {
+  transform: scale(1.05);
 }
-.comments_text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22.4px;
-  text-align: left;
-  text-underline-position: from-font;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  color: #222222;
-  padding: 0 0 20px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.445);
+@media (max-width: 600px) {
+  .comments_hero img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
 }
-.comments_user-block {
-  display: flex;
-  align-items: center;
-  padding: 10px 0 0 0;
-  gap: 10px;
-}
-.comments_avatar {
-  overflow: hidden;
-  max-width: 50px;
-  border-radius: 50%;
-}
+
 @media (max-width: 1520px) {
   .container-comments {
     max-width: 1080px;
@@ -1857,4 +1844,9 @@ html {
 
 .content-pad {
   padding: 10px 0 0 0;
+}
+
+.social_media {
+  display: flex;
+  gap: 20px;
 }/*# sourceMappingURL=style.css.map */
