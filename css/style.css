@@ -893,6 +893,7 @@ html {
 @media (max-width: 600px) {
   .company_picture {
     margin-bottom: 30px;
+    margin-top: 5px;
   }
 }
 .company_flags {
