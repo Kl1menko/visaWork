@@ -140,18 +140,30 @@ document.querySelector('.modal_form').addEventListener('submit', function (e) {
   this.reset();
 
   // Використовуємо Axios для відправки запиту на сервер
-  axios.post('/api/send-message', messageData)
+
+  const urlEncodedData = new URLSearchParams();
+  urlEncodedData.append('username', messageData.username);
+  urlEncodedData.append('tel', messageData.tel);
+  urlEncodedData.append('area', messageData.area);
+  urlEncodedData.append('text', messageData.text);
+
+  // Використовуємо Axios для відправки запиту на сервер 
+  axios.post('https://script.google.com/macros/s/AKfycbxWQVAbr535L5HJX2nD-aDY7TQBA7bo0LZvTMIMlYG4KGg6Z9jvkVfT8aa3doZWWki4LQ/exec', urlEncodedData, {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  })
     .then(response => {
-      // Якщо запит успішний
+      // Якщо запит успішний 
       if (response.data.success) {
         alert('Thank you, we will get in touch with you shortly!');
       } else {
-        // Якщо сервер відповідає, але є помилка
+        // Якщо сервер відповідає, але є помилка 
         alert('Thank you, we will get in touch with you shortly!');
       }
     })
     .catch(error => {
-      // Відображаємо повідомлення про помилку навіть при помилці
+      // Відображаємо повідомлення про помилку навіть при помилці 
       console.error('Error:', error);
       alert('Thank you, we will get in touch with you shortly!');
     });
